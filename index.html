@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nyahuka Parents' Senior Secondary School</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/students.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+          <img src="images/Logging.png" alt="School Logo" />
+         
+        </div>
+      
+        <button class="burger" id="burger">&#9776;</button> <!-- Burger Icon -->
+      
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+  </header>
+  <section class="hero-carousel">
+  <div class="carousel-slide active">
+    <img src="images/follow.jpg" alt="Slide 1" />
+    <div class="hero-caption">Welcome to Nyahuka Parents' S.S.S</div>
+  </div>
+  <div class="carousel-slide">
+    <img src="images/last.jpg" alt="Slide 2" />
+    <div class="hero-caption">Empowering Future Generations</div>
+  </div>
+  <div class="carousel-slide">
+    <img src="images/soccer.jpg" alt="Slide 3" />
+    <div class="hero-caption">Academic Excellence and Discipline</div>
+  </div>
+</section>
+
+    <section class="quick-facts">
+      <h2  class="section-title">Quick Facts</h2>
+      <div class="facts-grid">
+        <div class="fact-item">
+          <img src="images/follow.jpg" alt="Students" />
+          <h3>800+ Students</h3>
+          <p>Diverse and vibrant student community.</p>
+        </div>
+        <div class="fact-item">
+          <img src="images/nps.jpg" alt="Teachers" />
+          <h3>40+ Dedicated Staff</h3>
+          <p>Passionate educators committed to student success.</p>
+        </div>
+        <div class="fact-item">
+          <img src="images/npss.jpg" alt="Library" />
+          <h3>Modern Library</h3>
+          <p>Well-equipped with resources for all levels.</p>
+        </div>
+      </div>
+    </section>
+
+     <main class="students-container">
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h2>Welcome to Our Student Community</h2>
+                <p>At Nyahuka Parents' Secondary School, we believe education extends beyond the classroom. Our students enjoy a vibrant campus life with diverse activities that foster personal growth, leadership, and lifelong friendships.</p>
+                <a href="#apply" class="apply-btn">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="welcome-image">
+                <img src="images/follow.jpg" alt="Happy students at Nyahuka Parents' School">
+            </div>
+        </section>
+
+    <div class="info-sections">
+        <section class="announcements">
+          <h2  class="section-title">Latest Announcements</h2>
+          <ul>
+            <li>🔔 Mid-term exams start on May 13, 2025.</li>
+            <li>🎉 New computer lab officially opened on April 20, 2025.</li>
+            <li>🏫 Admissions for S.1 & S.5 now open!</li>
+          </ul>
+        </section>
+      
+        <section class="events">
+          <h2  class="section-title">Upcoming Events</h2>
+          <ul>
+            <li><strong>May 15:</strong> Career Guidance Day</li>
+            <li><strong>May 20:</strong> Inter-House Athletics Competition</li>
+            <li><strong>June 1:</strong> Parents’ General Meeting</li>
+          </ul>
+        </section>
+      </div>
+      
+      <section>
+        <div class="fixed-bg">
+  <div class="overlay">
+    <h1>Your Title Here</h1>
+    <p>Your description or slogan here.</p>
+  </div>
+</div>
+</section>
+  <section class="location-slider-section">
+        <div class="slider-container">
+          <button class="slider-btn left">&#10094;</button>
+      
+          <div class="slider-track">
+            <div class="card">
+              <img src="images/last.jpg" alt="Mountain Moroto" />
+              <p>Excellence</p>
+            </div>
+            <div class="card">
+              <img src="images/last.jpg" alt="Mabira Forest" />
+              <p>Integrity</p>
+            </div>
+            <div class="card">
+              <img src="images/last.jpg" alt="Mount Rwenzori" />
+              <p>Service</p>
+            </div>
+            <div class="card">
+              <img src="images/last.jpg" alt="Mountain Elgon" />
+              <p>Responsibility</p>
+            </div>
+            <div class="card">
+              <img src="images/last.jpg" alt="Mount Kadam" />
+              <p>Leadership</p>
+            </div>
+            <!-- Add more cards as needed -->
+          </div>
+      
+          <button class="slider-btn right">&#10095;</button>
+        </div>
+      </section>   
+       
+      
+  </main>
+
+     <footer class="footer">
+        <div class="footer-bottom">
+            <p>Copyright © All rights reserved @nyahukaparents'school</p>
+        </div>
+    </footer>
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".carousel-slide");
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }
+
+    setInterval(showNextSlide, 4000); // Switch every 4 seconds
+  });
+  </script>
+  
+</body>
+</html>
