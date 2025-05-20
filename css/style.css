@@ -722,14 +722,14 @@ header {
 
 @media (max-width: 480px) {
   .fixed-bg {
-    height: 60vh; /* shorter height on mobile */
+    height: 80vh; /* shorter height on mobile */
   }
 
   .overlay h1 {
-    font-size: 2rem; /* smaller heading */
+    font-size: 2.6rem; /* smaller heading */
   }
 
   .overlay p {
-    font-size: 1.5rem; /* smaller paragraph */
+    font-size: 1.8rem; /* smaller paragraph */
   }
 }
