@@ -47,6 +47,10 @@ body {
     margin-bottom: 0;
 }
 
+.facility-gallery {
+  padding: 2em 20px; /* 2em top/bottom, 20px left/right */
+}
+
 /* Main Container */
 .academics-container {
     max-width: 1200px;
