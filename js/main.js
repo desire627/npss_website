@@ -29,12 +29,6 @@
     }
   });
   
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', function() {
-                // In a real implementation, this would open a lightbox
-                alert('This would open a larger view of the image in a proper implementation.');
-            });
-        });
 
         function toggleChatbot() {
     const chatbot = document.getElementById('chatbotWindow');
@@ -58,3 +52,58 @@
     input.value = '';
     chatBox.scrollTop = chatBox.scrollHeight;
   }
+
+  function showImage(src) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+
+
+// Lightbox functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create lightbox container
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        document.body.appendChild(lightbox);
+        
+        // Get all gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Get the image source
+                const imgSrc = this.querySelector('img').src;
+                const caption = this.querySelector('.gallery-overlay p').textContent;
+                
+                // Create lightbox content
+                lightbox.innerHTML = `
+                    <div class="lightbox-content">
+                        <img src="${imgSrc}" alt="${caption}">
+                        <div class="lightbox-caption">${caption}</div>
+                        <span class="close-btn">&times;</span>
+                    </div>
+                `;
+                
+                // Display lightbox
+                lightbox.style.display = 'flex';
+                
+                // Close lightbox
+                lightbox.querySelector('.close-btn').addEventListener('click', () => {
+                    lightbox.style.display = 'none';
+                });
+            });
+        });
+        
+        // Close when clicking outside image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    });
