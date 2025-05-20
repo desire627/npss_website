@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/students.css" />
 </head>
-<body>
+<body id="top">
   <header>
     <nav class="navbar">
         <div class="logo">
           <img src="images/Logging.png" alt="School Logo" />
+          <span class="school-name" style="font-size: 18px; font-weight: bold; color: #8b5a2b; margin-left: 10px;">NYAHUKA PARENTS' S.S.S</span>
          
         </div>
       
@@ -143,28 +144,30 @@
             <p>Copyright © All rights reserved @nyahukaparents'school</p>
         </div>
     </footer>
-  <script>
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-  
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+    
+
+  <a href="#top" class="scroll-up" aria-label="Back to top">
+  &#8679; <!-- Upwards arrow symbol -->
+</a>
+
+<div class="chatbot-container">
+  <button class="chatbot-btn" onclick="toggleChatbot()">
+    <img src="https://cdn-icons-png.freepik.com/256/15320/15320513.png?ga=GA1.1.1431779235.1722192531&semt=ais_hybrid" alt="Chatbot" />
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">Chat with us</div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="message bot">Hello! How can I help you today?</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".carousel-slide");
-    let current = 0;
-
-    function showNextSlide() {
-      slides[current].classList.remove("active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("active");
-    }
-
-    setInterval(showNextSlide, 4000); // Switch every 4 seconds
-  });
-  </script>
-  
+<script src="js/main.js"></script>
 </body>
 </html>

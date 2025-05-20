@@ -8,11 +8,12 @@
    <link rel="stylesheet" href="css/students.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body id="top">
   <header>
     <nav class="navbar">
         <div class="logo">
           <img src="images/Logging.png" alt="School Logo" />
+          <span class="school-name" style="font-size: 18px; font-weight: bold; color: #8b5a2b; margin-left: 10px;">NYAHUKA PARENTS' S.S.S</span>
          
         </div>
       
@@ -226,21 +227,28 @@
         </div>
     </footer>
 
-    <script>
-      
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-  
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', function() {
-                // In a real implementation, this would open a lightbox
-                alert('This would open a larger view of the image in a proper implementation.');
-            });
-        });
-    </script>
+<a href="#top" class="scroll-up" aria-label="Back to top">
+  &#8679; 
+</a>
+
+<div class="chatbot-container">
+  <button class="chatbot-btn" onclick="toggleChatbot()">
+    <img src="https://cdn-icons-png.freepik.com/256/15320/15320513.png?ga=GA1.1.1431779235.1722192531&semt=ais_hybrid" alt="Chatbot" />
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">Chat with us</div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="message bot">Hello! How can I help you today?</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/main.js"></script>
 </body>
 </html>
