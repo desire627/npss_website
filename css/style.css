@@ -365,7 +365,7 @@ body {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.0); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black */
   color: white;
   text-align: center;
   /* padding: 40px 60px; */
