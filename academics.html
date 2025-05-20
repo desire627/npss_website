@@ -10,23 +10,26 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">
-        <img src="images/Logging.png" alt="School Logo" />
-        
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="academics.html" class="active">Academics</a></li>
-        <li><a href="students.html">Students</a></li>
-        <li><a href="staff.html">Staff</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+        <div class="logo">
+          <img src="images/Logging.png" alt="School Logo" />
+         
+        </div>
+      
+        <button class="burger" id="burger">&#9776;</button> <!-- Burger Icon -->
+      
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
   </header>
     <body>
     <section>
-        <div class="fixed-bg">
+        <div class="fixed-bg" style="background-image: url('images/last.jpg');">
   <div class="overlay">
     <h1>NYAHUKA PARENTS' SENIOR SECONDARY SCHOOL</h1>
     <p>We Strive To Excel.</p>
@@ -292,5 +295,13 @@
       <p>Copyright © All rights reserved @nyahukaparents'school</p>
     </div>
   </footer>
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

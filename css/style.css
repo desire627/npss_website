@@ -662,4 +662,74 @@ header {
       color: #555;
     }
 
-    
+    .features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* default for large screens */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr); /* 2 by 2 layout on tablets and mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr); /* ensure 2 by 2 even on smaller devices */
+  }
+}
+
+.feature {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* default for large screens */
+  gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.fact-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.fact-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .facts-grid {
+    grid-template-columns: 1fr; /* 1 column on small mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .fixed-bg {
+    height: 60vh; /* shorter height on mobile */
+  }
+
+  .overlay h1 {
+    font-size: 2rem; /* smaller heading */
+  }
+
+  .overlay p {
+    font-size: 1.5rem; /* smaller paragraph */
+  }
+}

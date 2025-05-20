@@ -10,28 +10,32 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">
-        <img src="images/Logging.png" alt="School Logo" />
-        
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="students.html">Students</a></li>
-        <li><a href="staff.html">Staff</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+        <div class="logo">
+          <img src="images/Logging.png" alt="School Logo" />
+         
+        </div>
+      
+        <button class="burger" id="burger">&#9776;</button> <!-- Burger Icon -->
+      
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
   </header>
    <section>
-        <div class="fixed-bg">
-  <div class="overlay">
-    <h1>NYAHUKA PARENTS' SENIOR SECONDARY SCHOOL</h1>
-    <p>We Strive To Excel.</p>
+  <div class="fixed-bg" style="background-image: url('images/follow.jpg'); ">
+    <div class="overlay">
+      <h1>NYAHUKA PARENTS' SENIOR SECONDARY SCHOOL</h1>
+      <p>We Strive To Excel.</p>
+    </div>
   </div>
-</div>
- </section>
+</section>
+
 
   <main>
   <section id="about-school">
@@ -73,27 +77,27 @@
             <div class="facility-gallery">
                 <div class="facility-item">
                     <img src="images/last.jpg" alt="Computer Lab">
-                    <h3>Managing Director</h3>
+                    <h3>Managing Director <br> Rwiha Wickliff </h3>
                 </div>
                 <div class="facility-item">
                     <img src="images/soccer.jpg" alt="School Library">
-                    <h3>Head Teacher</h3>
+                    <h3>Head Teacher<br> Sabiiti Daphine </h3>
                 </div>
                 <div class="facility-item">
                     <img src="images/last.jpg" alt="Computer Lab">
-                    <h3>Deputy Head Teacher</h3>
+                    <h3>Deputy Head Teacher <br> Muhanuzi Ronald </h3>
                 </div>
                 <div class="facility-item">
                     <img src="images/soccer.jpg" alt="School Library">
-                    <h3>DOS</h3>
+                    <h3>Director of Studies  <br> Businge Fred </h3>
                 </div>
                 <div class="facility-item">
                     <img src="images/last.jpg" alt="Computer Lab">
-                    <h3>Deputy Head Teacher</h3>
+                    <h3>Bursar <br> Kule Elijah </h3>
                 </div>
                 <div class="facility-item">
                     <img src="images/soccer.jpg" alt="School Library">
-                    <h3>DOS</h3>
+                    <h3>SeniorWoman <br> Nakalema Roset </h3>
                 </div>
             </div>
         </section>
@@ -101,16 +105,16 @@
 <section id="director-insights">
   <div class="insights-container">
     <div class="insight-image">
-      <img src="images/nps.jpg" alt="Director's Photo" />
+      <img src="images/director.jpg" alt="Director's Photo" />
     </div>
     <div class="insight-text">
-      <h2 class="section-title">Director’s Insights</h2>
+      <h2 class="section-title">Kiiza Acrobat Moses</h2>
       <br>
       <p>
-        At our institution, we believe in nurturing not just academic excellence but also personal growth and community values. We aim to prepare students to be future leaders with integrity and innovation.
-        At our institution, we believe in nurturing not just academic excellence but also personal growth and community values. We aim to prepare students to be future leaders with integrity and innovation.
-        At our institution, we believe in nurturing not just academic excellence but also personal growth and community values. We aim to prepare students to be future leaders with integrity and innovation.
-      </p>
+        As the founder (CEO) of Nyahuka Parents' Senior Secondary School, I am driven by a deep commitment to transforming education into a powerful tool for community upliftment. My vision has always been to create a nurturing environment where students from all backgrounds can unlock their potential, not just academically but also morally and socially. 
+        I believe that quality education should be accessible, values-based, and relevant to the challenges of our times. Through this school, I aim to cultivate critical thinkers, responsible citizens, and future leaders who are grounded in integrity and cultural identity. Establishing this institution has taught me that true impact lies not just
+         in infrastructure, but in empowering passionate educators, involving parents, and consistently aligning our efforts with the needs of the learners and the wider community.
+         </p>
     </div>
   </div>
 </section>
@@ -118,8 +122,8 @@
 
 
     <section>
-        <div class="fixed-bg">
-  <div class="overlay">
+      <div class="fixed-bg" style="background-image: url('images/full.jpg');">
+   <div class="overlay">
     <h1>Our Achievements</h1>
     <p>Your description or slogan here.</p>
   </div>
@@ -174,5 +178,13 @@
       <p>Copyright © All rights reserved @nyahukaparents'school</p>
     </div>
   </footer>
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
