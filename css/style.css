@@ -602,14 +602,38 @@ header {
   line-height: 1.6;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .insights-container {
     flex-direction: column;
     text-align: center;
+    gap: 2rem; /* Reduced gap for mobile */
+    padding: 0 1rem; /* Added side padding */
   }
 
-  .insight-text, .insight-image {
+  .insight-image img {
     max-width: 100%;
+    min-height: auto; /* Remove fixed height */
+    aspect-ratio: 1/1; /* Square ratio on mobile */
+  }
+
+  .insight-text {
+    padding: 0 1rem; /* Added side padding for text */
+  }
+
+  .insight-text p {
+    text-align: justify; /* Better readability than justified on mobile */
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  #director-insights {
+    padding: 2rem 0.5rem;
+  }
+  
+  .insight-image img {
+    border-radius: 8px 8px 0 0; /* Different radius for mobile */
   }
 }
  .why-choose-us {
