@@ -5,6 +5,11 @@
       navLinks.classList.toggle('active');
     });
 
+     document.querySelectorAll('#navMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
 
     document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".carousel-slide");
@@ -15,6 +20,8 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add("active");
     }
+
+
 
     setInterval(showNextSlide, 4000); // Switch every 4 seconds
   });
@@ -107,3 +114,5 @@ function closeModal() {
             }
         });
     });
+
+    
