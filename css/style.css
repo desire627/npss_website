@@ -712,7 +712,7 @@ header {
 
 @media (max-width: 480px) {
   .fixed-bg {
-    height: 80vh; /* shorter height on mobile */
+    height: 70vh; /* shorter height on mobile */
   }
 
   .overlay h1 {
