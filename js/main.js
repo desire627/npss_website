@@ -134,3 +134,75 @@ function closeModal() {
             behavior: 'smooth'
         });
     }, 7000);
+
+
+
+
+   const modal = document.getElementById("admissionPopup");
+  const applyBtn = document.querySelector(".apply-btn");
+  const closeBtn = document.querySelector(".close-btn");
+  const cancelBtn = document.querySelector(".cancel-btn");
+
+  // Open modal
+  applyBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Re-enable background scrolling
+  }
+
+  // Attach close handlers
+  closeBtn.addEventListener("click", closeModal);
+  cancelBtn.addEventListener("click", closeModal);
+
+  // Close when clicking outside
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Form submission
+  document.getElementById("admissionForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    // Basic validation
+    if (!this.checkValidity()) {
+      // Scroll to first invalid field
+      const invalidField = this.querySelector(":invalid");
+      if (invalidField) {
+        invalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        invalidField.focus();
+      }
+      return;
+    }
+    
+    // Form is valid - process submission
+    alert("Application submitted successfully! We will contact you soon.");
+    closeModal();
+    this.reset();
+  });
+
+  // Prevent background scrolling when modal is open
+  modal.addEventListener('wheel', function(e) {
+    if (!e.target.closest('.modal-content')) {
+      e.preventDefault();
+    }
+  });
+
+  modal.addEventListener('wheel', function(e) {
+  if (e.deltaX !== 0) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// Reset on close
+function closeModal() {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
