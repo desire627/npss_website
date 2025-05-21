@@ -115,4 +115,17 @@ function closeModal() {
         });
     });
 
-    
+    const slider = document.querySelector('.stories-slider');
+    let scrollAmount = 0;
+
+    setInterval(() => {
+        if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+            scrollAmount = 0;
+        } else {
+            scrollAmount += 320; // adjust based on card width + gap
+        }
+        slider.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }, 7000);
