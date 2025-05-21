@@ -308,6 +308,10 @@ body {
     align-items: center;
     text-align: center;
   }
+  .footer-content h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+ }
 }
 
 .contact-info p {
