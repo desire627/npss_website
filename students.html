@@ -212,13 +212,14 @@
             </div>
         </section>
 
-       <section class="apply-section">
-  <div class="welcome-content">
-    <h2>Welcome to Our Student Community</h2>
-    <p>At Nyahuka Parents' Secondary School, we believe education extends beyond the classroom...</p>
-    <a href="#" class="apply-btn" id="openModalBtn">Apply Online <i class="fas fa-laptop"></i></a>
-  </div>
-</section>
+        <section id="apply" class="apply-section">
+            <div class="apply-content">
+                <h2>Ready to Join Our Community?</h2>
+                <p>Applications are now open for the next academic year. Become part of the Nyahuka Parents' family today!</p>
+                <div class="apply-btn">
+                    <a href="#" class="apply-btn" id="openModalBtn">Apply Online <i class="fas fa-laptop"></i></a>
+                    
+                
             </div>
         </section>
     </main>
@@ -402,18 +403,6 @@
   &#8679; 
 </a>
 
-<script>
-  // Modal open handler
-  document.getElementById('openModalBtn').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('admissionPopup').style.display = 'block';
-  });
-
-  // Close handler (keep your existing close code)
-  document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('admissionPopup').style.display = 'none';
-  });
-</script>
 
 <script src="js/main.js"></script>
 </body>

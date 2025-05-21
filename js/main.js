@@ -206,3 +206,13 @@ function closeModal() {
   modal.style.display = "none";
   document.body.style.overflow = "auto";
 }
+
+ document.getElementById('openModalBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('admissionPopup').style.display = 'block';
+  });
+
+  // Close handler (keep your existing close code)
+  document.querySelector('.close-btn').addEventListener('click', function() {
+    document.getElementById('admissionPopup').style.display = 'none';
+  });
