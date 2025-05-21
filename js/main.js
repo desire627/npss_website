@@ -1,16 +1,21 @@
- const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-  
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
 
-     document.querySelectorAll('#navMenu a').forEach(link => {
+const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('#nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
+      navLinks.classList.remove('active');
     });
   });
 
+  // Fix menu showing on browser back
+  window.addEventListener('pageshow', () => {
+    navLinks.classList.remove('active');
+  });
     document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".carousel-slide");
     let current = 0;
