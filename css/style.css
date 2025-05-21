@@ -6,6 +6,13 @@ body {
     color: #333;
   }
 
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+   
+}
+
   #burger {
   color: white !important;
   background: none;
@@ -409,6 +416,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 0.3em;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
   
 }
 

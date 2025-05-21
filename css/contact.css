@@ -27,7 +27,7 @@
 }
 
 .contact-card h2 {
-    color: #8b5a2b;
+    color: #8b6914;
     margin-bottom: 15px;
     font-size: 1.5rem;
     position: relative;
@@ -41,7 +41,7 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background-color: #8b5a2b;
+    background-color: #8b6914;
 }
 
 .contact-icon svg {
@@ -95,7 +95,7 @@
 }
 
 .submit-btn {
-    background-color: #8b5a2b ;
+    background-color: #b8860b ;
     color: white;
     border: none;
     padding: 12px 25px;
