@@ -70,7 +70,7 @@
 .form-group label {
     margin-bottom: 8px;
     font-weight: 600;
-    color: #2c3e50;
+    color: #8b5a2b;
 }
 
 .form-group input,
@@ -95,7 +95,7 @@
 }
 
 .submit-btn {
-    background-color: #8b5a2b;
+    background-color: #8b5a2b ;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -108,7 +108,7 @@
 }
 
 .submit-btn:hover {
-    background-color: #2980b9;
+    background-color: #8b5a2b;
     transform: translateY(-2px);
 }
 
