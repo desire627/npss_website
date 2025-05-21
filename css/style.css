@@ -468,9 +468,7 @@ header {
   cursor: pointer;
 }
 
-.burger:hover {
-  transform: rotate(90deg);
-}
+
 
 @media (max-width: 768px) {
   .nav-links {
