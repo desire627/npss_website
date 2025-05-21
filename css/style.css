@@ -61,7 +61,7 @@ body {
   .nav-links a:hover,
   .nav-links a.active {
     background: #d2b48c;
-    border-bottom: 2px solid #fff;
+    /* border-bottom: 2px solid #fff; */
   }
 
   /* Hide menu by default on small screens */
@@ -464,7 +464,7 @@ header {
 .nav-links a:hover,
 .nav-links a.active {
   background: #d2b48c;
-  border-bottom: 2px solid #fff;
+  /* border-bottom: 2px solid #fff; */
   transform: translateY(-2px);
 }
 
